@@ -1,0 +1,33 @@
+@use "../variables" as v;
+@mixin button () {
+    .button {
+    color: v.$white;
+    background-image: v.$main-bg;
+    font-family: v.$font-family;
+    font-size: 1rem;
+    text-transform: uppercase;
+    letter-spacing: 0.1rem;
+    padding:1.2rem 1rem;
+    border: none;
+    border-radius: 100px;
+    width: 100%; 
+    margin-top: 1rem;
+    cursor: pointer;   
+
+    &:disabled{
+        opacity:0.35;
+        cursor:not-allowed;
+
+    }
+    }
+    .secondary {
+        background-color: transparent;
+        border: 1px solid var(--accent-color);
+        color: var(--accent-color);
+    }
+    .tertiary {
+        background: transparent;
+        border: 1px solid transparent;
+        color: var(--accent-color);
+    }
+}
